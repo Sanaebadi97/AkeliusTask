@@ -50,6 +50,7 @@ object Versions {
     const val firebaseMessagingVersion = "23.0.0"
     const val swiperefreshlayoutVersion = "1.1.0"
     const val lifeCycleVersion = "2.4.0"
+    const val roomVersion = "2.5.0-beta01"
 }
 
 object AppDependencies {
@@ -119,6 +120,9 @@ object AppDependencies {
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifeCycleVersion}"
     private const val lifecycleServices =
         "androidx.lifecycle:lifecycle-service:${Versions.lifeCycleVersion}"
+    private const val roomRunTime = "androidx.room:room-runtime:${Versions.roomVersion}"
+    private const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+    private const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
     private const val junit = "junit:junit:${Versions.junitVersion}"
     private const val extJUnit = "androidx.test.ext:junit:${Versions.extJunitVersion}"
     private const val espressoCore =
@@ -156,11 +160,17 @@ object AppDependencies {
         add(kotshi)
     }
 
+    val roomLibraries = arrayListOf<String>().apply {
+        add(roomRunTime)
+        add(roomKtx)
+    }
+
     val compilerLibraries = arrayListOf<String>().apply {
         add(moshiCodegen)
         add(kotshiCompiler)
         add(hiltAndroidCompiler)
         add(glideCompiler)
+        add(roomCompiler)
     }
 
     val navigator = arrayListOf<String>().apply {

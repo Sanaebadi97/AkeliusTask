@@ -21,9 +21,11 @@ android {
             AppConfig.versionMajor * 100 + AppConfig.versionMinor * 10 + AppConfig.versionPatch
         versionName =
             "${AppConfig.versionMajor}.${AppConfig.versionMinor}.${AppConfig.versionPatch}"
-        setProperty("archivesBaseName", "EzPin-v$versionName")
+        setProperty("archivesBaseName", "Akelius-v$versionName")
         buildConfigField("String", "FILE_PROVIDER_AUTHORITY", "\"APPLICATION_ID.file_provider\"")
         buildConfigField("String", "API_BASE_URL", "\"http://77.71.26.41:8686/\"")
+        buildConfigField("String", "DATABASE_NAME", "\"AkeliusApp\"")
+        buildConfigField("int",    "DATABASE_VERSION", "1")
         testInstrumentationRunner = AppConfig.androidTestInstrumentation
 
     }
@@ -90,6 +92,7 @@ dependencies {
     implementation(AppDependencies.hiltLibraries)
     implementation(AppDependencies.navigator)
     implementation(AppDependencies.lifecycleLibraries)
+    implementation(AppDependencies.roomLibraries)
     implementation(AppDependencies.firebaseLibraries)
     kapt(AppDependencies.compilerLibraries)
     testImplementation(AppDependencies.testLibraries)
