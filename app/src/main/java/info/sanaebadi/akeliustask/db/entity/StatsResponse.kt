@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class Stats(
+data class StatsResponse(
     @Json(name = "atime")
     val atime: String?,
     @Json(name = "atimeMs")
@@ -42,4 +42,6 @@ data class Stats(
     val size: Int?,
     @Json(name = "uid")
     val uid: Int?
-)
+){
+
+}

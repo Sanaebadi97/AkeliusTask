@@ -11,15 +11,13 @@ pluginManagement {
         id("org.jetbrains.kotlin.jvm") version "1.7.10"
         id("org.jetbrains.kotlin.kapt") version "1.6.0-RC2"
         id("org.jetbrains.kotlin.plugin.parcelize") version "1.6.0-M1"
-
-
     }
 
     resolutionStrategy {
         eachPlugin {
             // Use `resolutionStrategy` to define the Hilt plugin and its coordinate
             if (requested.id.id == "dagger.hilt.android.plugin")
-                useModule("com.google.dagger:hilt-android-gradle-plugin:2.38.1")
+                useModule("com.google.dagger:hilt-android-gradle-plugin:2.44")
             if (requested.id.id == "androidx.navigation.safeargs")
                 useModule("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
             if (requested.id.id == "com.google.gms.google-services")
@@ -36,4 +34,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "AkeliusTask"
-include(":app" ,":uikit" )
+include(":app")
+include(":uikit")
