@@ -1,4 +1,4 @@
-package info.sanaebadi.akeliustask.network
+package info.sanaebadi.akeliustask.network.base
 
 import java.io.IOException
 import java.net.InetAddress

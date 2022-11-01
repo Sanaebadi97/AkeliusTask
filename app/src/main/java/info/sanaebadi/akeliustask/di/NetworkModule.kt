@@ -6,9 +6,10 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import info.sanaebadi.akeliustask.BuildConfig
-import info.sanaebadi.akeliustask.network.ApplicationJsonAdapterFactory
-import info.sanaebadi.akeliustask.network.TLSSocketFactory
-import info.sanaebadi.akeliustask.network.UnitConverterFactory
+import info.sanaebadi.akeliustask.network.base.ApplicationJsonAdapterFactory
+import info.sanaebadi.akeliustask.network.base.TLSSocketFactory
+import info.sanaebadi.akeliustask.network.base.UnitConverterFactory
+import info.sanaebadi.akeliustask.network.service.AssetsRetrofitServices
 import okhttp3.ConnectionPool
 import okhttp3.Dispatcher
 import okhttp3.OkHttpClient
@@ -88,5 +89,10 @@ object NetworkModule {
             .addConverterFactory(UnitConverterFactory)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
     }
+
+    @Provides
+    @Singleton
+    fun provideAssetsRetrofitService(retrofit: Retrofit): AssetsRetrofitServices =
+        retrofit.create(AssetsRetrofitServices::class.java)
 
 }

@@ -1,4 +1,4 @@
-package info.sanaebadi.akeliustask.network
+package info.sanaebadi.akeliustask.network.base
 
 import com.squareup.moshi.JsonAdapter
 import se.ansman.kotshi.KotshiJsonAdapterFactory
