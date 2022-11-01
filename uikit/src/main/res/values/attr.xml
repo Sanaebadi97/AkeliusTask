@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorTextPrimary" format="color" />
+    <attr name="colorTextPrimaryLight" format="color" />
+    <attr name="colorTextPrimaryHighLight" format="color" />
+    <attr name="colorTextSecondary" format="color" />
+    <attr name="colorDivider" format="color" />
+    <attr name="colorRipple" format="color" />
+    <attr name="colorRippleSecondary" format="color" />
+    <attr name="colorSurface" format="color" />
+    <attr name="colorGreen" format="color" />
+    <attr name="colorRed" format="color" />
+
+
+    <declare-styleable name="MaskedEditText">
+        <attr name="mask" format="string" />
+        <attr name="allowed_chars" format="string" />
+        <attr name="enable_ime_action" format="boolean" />
+        <attr name="denied_chars" format="string" />
+        <attr name="char_representation" format="string" />
+        <attr name="keep_hint" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="InternetView">
+        <attr name="retry_button_visibility" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressButton">
+        <attr name="pb_text" format="string" />
+        <attr name="pb_loadingGone" format="boolean" />
+        <attr name="pb_inactive" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressView">
+        <attr name="pb_progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomSheetHeaderView">
+        <attr name="hv_title" format="string" />
+        <attr name="hv_subtitle" format="string" />
+        <attr name="hv_dividerGone" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberTextRow">
+        <attr name="nt_number" format="string" />
+        <attr name="nt_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="IconTextRow">
+        <attr name="it_icon" format="integer" />
+        <attr name="it_text" format="string" />
+        <attr name="it_iconGone" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TripleButton">
+        <attr name="b3_Start_button_text" format="string" />
+        <attr name="b3_center_button_text" format="string" />
+        <attr name="b3_End_button_text" format="string" />
+        <attr name="b3_selected_position" format="integer">
+            <enum name="Start" value="0" />
+            <enum name="center" value="1" />
+            <enum name="End" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TwinButton">
+        <attr name="b2_Start_button_text" format="string" />
+        <attr name="b2_End_button_text" format="string" />
+        <attr name="b2_selected_position" format="integer">
+            <enum name="Start" value="0" />
+            <enum name="End" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CropImageView">
+        <attr name="cropGuidelines">
+            <enum name="off" value="0" />
+            <enum name="onTouch" value="1" />
+            <enum name="on" value="2" />
+        </attr>
+        <attr name="cropScaleType">
+            <enum name="fitCenter" value="0" />
+            <enum name="center" value="1" />
+            <enum name="centerCrop" value="2" />
+            <enum name="centerInside" value="3" />
+        </attr>
+        <attr name="cropShape">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+        </attr>
+        <attr name="cropAutoZoomEnabled" format="boolean" />
+        <attr name="cropMaxZoom" format="integer" />
+        <attr name="cropMultiTouchEnabled" format="boolean" />
+        <attr name="cropFixAspectRatio" format="boolean" />
+        <attr name="cropAspectRatioX" format="integer" />
+        <attr name="cropAspectRatioY" format="integer" />
+        <attr name="cropInitialCropWindowPaddingRatio" format="float" />
+        <attr name="cropBorderLineThickness" format="dimension" />
+        <attr name="cropBorderLineColor" format="color" />
+        <attr name="cropBorderCornerThickness" format="dimension" />
+        <attr name="cropBorderCornerOffset" format="dimension" />
+        <attr name="cropBorderCornerLength" format="dimension" />
+        <attr name="cropBorderCornerColor" format="color" />
+        <attr name="cropGuidelinesThickness" format="dimension" />
+        <attr name="cropGuidelinesColor" format="color" />
+        <attr name="cropBackgroundColor" format="color" />
+        <attr name="cropSnapRadius" format="dimension" />
+        <attr name="cropTouchRadius" format="dimension" />
+        <attr name="cropSaveBitmapToInstanceState" format="boolean" />
+        <attr name="cropShowCropOverlay" format="boolean" />
+        <attr name="cropShowProgressBar" format="boolean" />
+        <attr name="cropMinCropWindowWidth" format="dimension" />
+        <attr name="cropMinCropWindowHeight" format="dimension" />
+        <attr name="cropMinCropResultWidthPX" format="float" />
+        <attr name="cropMinCropResultHeightPX" format="float" />
+        <attr name="cropMaxCropResultWidthPX" format="float" />
+        <attr name="cropMaxCropResultHeightPX" format="float" />
+        <attr name="cropFlipHorizontally" format="boolean" />
+        <attr name="cropFlipVertically" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DividerView">
+        <attr name="color" format="color" />
+        <attr name="dashGap" format="dimension" />
+        <attr name="dashLength" format="dimension" />
+        <attr name="dashThickness" format="dimension" />
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>
