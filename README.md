@@ -16,6 +16,7 @@
 - ViewBinding for bind xml to kotlin
 - uiKit module for seperate resources from peoject
 - buildSrc and Dependencies for declare libraries 
+- GitFlow
 
 
 # [Video for demo](https://mega.nz/file/ZQlGDAyI#-2b_mCevrxsGxvDIjU44hhWOsIG1fl--5XadI3l0La0)
