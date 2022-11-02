@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#212223</color>
+    <color name="colorPrimaryDark">#0a0a0a</color>
+    <color name="colorPrimaryLight">#6d6d6d</color>
+    <color name="colorAccent">#f1682a</color>
+    <color name="basic_background">#2E2E2E</color>
+    <color name="black">#282E40</color>
+    <color name="grayDark">#acb4c9</color>
+    <color name="disable_color">#747272</color>
+    <color name="stroke">#363636</color>
+    <color name="textColorHint">#CCC5C5</color>
+    <color name="textColorPrimary">#6d6d6d</color>
+    <color name="textColorSecondary">#8a8a8a</color>
+    <color name="textColorThird">#424242</color>
+    <color name="textColorBlack">#212121</color>
+    <color name="textColorWhite">#f5f5f5</color>
+    <color name="red">#d32f2f</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#f5c445</color>
+    <color name="customWhite">#f5f5f5</color>
+    <color name="blue">#27406d</color>
+    <color name="green">#1c826b</color>
+    <color name="brown">#434041</color>
+    <color name="divider">#000000</color>
+    <color name="white_FFFFFF">#FFFFFF</color>
+    <color name="black_000000">#000000</color>
+    <color name="green_00DAA2">#00DAA2</color>
+    <color name="red_E64274">#E64274</color>
+    <color name="blue_3861FB">#3861FB</color>
+    <color name="gray_818A9B">#818A9B</color>
+    <color name="gray_A4B1C2">#A4B1C2</color>
+    <color name="gray_EEF2F5">#EEF2F5</color>
+    <color name="gray_323546">#323546</color>
+</resources>
