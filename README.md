@@ -1,4 +1,7 @@
-# AkeliusTask
+# AkeliusTask android assignment 2
+
+## Your task is to create an application that caches assets(images) and provides a way to monitor and apply updates of the assets if provided remotely.
+
 
 - Kotlin
 - MVVM Pattern
@@ -8,4 +11,11 @@
 - Moshi for Convertor
 - KotlinDSl for gradle
 - Flow and coroutines for multiThreading 
-- 
+- lifecycle librareis for livedata and viewModel
+- Navigation Component for fragment management 
+- ViewBinding for bind xml to kotlin
+- uiKit module for seperate resources from peoject
+- buildSrc and Dependencies for declare libraries 
+
+
+# Video for demo
