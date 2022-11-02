@@ -30,7 +30,7 @@ object Versions {
     const val junitVersion = "4.13.2"
     const val extJunitVersion = "1.1.3"
     const val espressoVersion = "3.4.0"
-    const val hiltVersion = "2.44"
+    const val hiltVersion = "2.41"
     const val coroutinesVersion = "1.3.9"
     const val navigationComponent = "2.3.5"
     const val retrofitVersion = "2.9.0"

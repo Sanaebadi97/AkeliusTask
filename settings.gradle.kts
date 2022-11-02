@@ -17,7 +17,7 @@ pluginManagement {
         eachPlugin {
             // Use `resolutionStrategy` to define the Hilt plugin and its coordinate
             if (requested.id.id == "dagger.hilt.android.plugin")
-                useModule("com.google.dagger:hilt-android-gradle-plugin:2.44")
+                useModule("com.google.dagger:hilt-android-gradle-plugin:2.43.2")
             if (requested.id.id == "androidx.navigation.safeargs")
                 useModule("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
             if (requested.id.id == "com.google.gms.google-services")

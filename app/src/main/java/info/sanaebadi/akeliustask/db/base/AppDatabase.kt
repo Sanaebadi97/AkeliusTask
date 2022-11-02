@@ -9,8 +9,8 @@ import info.sanaebadi.akeliustask.db.entity.AssetsResponse
 import info.sanaebadi.akeliustask.db.entity.FileResponse
 
 
-@Database(entities = [FileResponse::class], version = BuildConfig.VERSION_CODE, exportSchema = false)
-@TypeConverters(NormalConverters::class)
+@Database(entities = [AssetsResponse::class], version = BuildConfig.VERSION_CODE, exportSchema = false)
+@TypeConverters(DataConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun assetDao(): AssetsDao
 }

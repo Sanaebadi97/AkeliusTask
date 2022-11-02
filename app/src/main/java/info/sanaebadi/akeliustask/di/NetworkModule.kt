@@ -6,7 +6,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import info.sanaebadi.akeliustask.BuildConfig
-import info.sanaebadi.akeliustask.network.base.ApplicationJsonAdapterFactory
 import info.sanaebadi.akeliustask.network.base.TLSSocketFactory
 import info.sanaebadi.akeliustask.network.base.UnitConverterFactory
 import info.sanaebadi.akeliustask.network.service.AssetsRetrofitServices
@@ -29,7 +28,6 @@ object NetworkModule {
     fun provideMoshi(): Moshi =
         Moshi
             .Builder()
-            .add(ApplicationJsonAdapterFactory)
             .build()
 
     @Provides

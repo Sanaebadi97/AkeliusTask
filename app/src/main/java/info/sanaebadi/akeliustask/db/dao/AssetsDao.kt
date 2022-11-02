@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.Flow
 interface AssetsDao {
 
     @Query("SELECT * FROM akelius_assets")
-    fun getAllAssets(): Flow<List<FileResponse>>
+    fun getAllAssets(): Flow<AssetsResponse>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAssets(assetsResponse: AssetsResponse)
