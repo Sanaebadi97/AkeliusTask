@@ -17,6 +17,7 @@
 - ViewBinding for bind xml to kotlin
 - uiKit module for seperate resources from peoject
 - buildSrc and Dependencies for declare libraries 
+-ListAdapter for recyclerView
 - GitFlow
 
 
