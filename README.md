@@ -22,3 +22,5 @@
 
 # [Video for demo](https://mega.nz/file/ZQlGDAyI#-2b_mCevrxsGxvDIjU44hhWOsIG1fl--5XadI3l0La0)
 
+# [Apk for install](https://mega.nz/file/8R8HmDzK#7-OV8AfB1PI-DO67WD7hHNNGXNLAMUEixOcsezQ-iWM)
+
