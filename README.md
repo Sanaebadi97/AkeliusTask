@@ -13,6 +13,7 @@
 - Flow and coroutines for multiThreading 
 - lifecycle librareis for livedata and viewModel
 - Navigation Component for fragment management 
+- Glide for load and fetch images
 - ViewBinding for bind xml to kotlin
 - uiKit module for seperate resources from peoject
 - buildSrc and Dependencies for declare libraries 
