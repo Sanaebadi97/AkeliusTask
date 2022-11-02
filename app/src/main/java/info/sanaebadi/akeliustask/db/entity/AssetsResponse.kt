@@ -1,16 +1,17 @@
 package info.sanaebadi.akeliustask.db.entity
 
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import info.sanaebadi.akeliustask.db.base.DataConverter
 
 @JsonClass(generateAdapter = true)
 @Entity(tableName = "akelius_assets")
 data class AssetsResponse(
+    @PrimaryKey
     @Json(name = "status")
-    @PrimaryKey val status: String?,
+    val status: String,
     @Json(name = "files")
-    val files: List<File?>?
+    val fileResponses: List<FileResponse>
 )

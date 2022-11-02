@@ -1,13 +1,16 @@
 package info.sanaebadi.akeliustask.db.entity
 
 
+import androidx.room.Embedded
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class File(
+data class FileResponse(
     @Json(name = "path")
-    val path: String?,
+    val path: String,
     @Json(name = "stats")
-    val stats: Stats?
+    val statsResponse: StatsResponse
 )

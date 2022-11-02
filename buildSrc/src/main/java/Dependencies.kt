@@ -30,13 +30,13 @@ object Versions {
     const val junitVersion = "4.13.2"
     const val extJunitVersion = "1.1.3"
     const val espressoVersion = "3.4.0"
-    const val hiltVersion = "2.40"
+    const val hiltVersion = "2.41"
     const val coroutinesVersion = "1.3.9"
     const val navigationComponent = "2.3.5"
     const val retrofitVersion = "2.9.0"
     const val okhttpVersion = "4.9.2"
-    const val moshiVersion = "1.12.0"
-    const val moshiKotlinVersion = "1.13.0"
+    const val moshiVersion = "1.14.0"
+    const val moshiKotlinVersion = "1.14.0"
     const val kotshiVersion = "2.6.3"
     const val multidexVersion = "2.0.1"
     const val datastorePreferenceVersion = "1.0.0"
@@ -51,6 +51,7 @@ object Versions {
     const val swiperefreshlayoutVersion = "1.1.0"
     const val lifeCycleVersion = "2.4.0"
     const val roomVersion = "2.5.0-beta01"
+    const val liveDataVersion = "2.5.1"
 }
 
 object AppDependencies {
@@ -120,6 +121,8 @@ object AppDependencies {
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifeCycleVersion}"
     private const val lifecycleServices =
         "androidx.lifecycle:lifecycle-service:${Versions.lifeCycleVersion}"
+    private const val liveDataServices =
+        "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.liveDataVersion}"
     private const val roomRunTime = "androidx.room:room-runtime:${Versions.roomVersion}"
     private const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
     private const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
@@ -147,6 +150,7 @@ object AppDependencies {
         add(lifecycleRuntime)
         add(lifecycleViewModel)
         add(lifecycleServices)
+        add(liveDataServices)
     }
 
     val networkingLibraries = arrayListOf<String>().apply {

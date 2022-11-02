@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import info.sanaebadi.akeliustask.db.entity.AssetsResponse
+import info.sanaebadi.akeliustask.db.entity.FileResponse
 import kotlinx.coroutines.flow.Flow
 
 @Dao
