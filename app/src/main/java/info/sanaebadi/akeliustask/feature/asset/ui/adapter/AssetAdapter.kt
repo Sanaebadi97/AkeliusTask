@@ -32,7 +32,7 @@ class AssetAdapter : ListAdapter<FileEntity, AssetAdapter.AssetViewHolder>(Asset
                     fileResponse.path,
                     LoadImage.getProgressDrawable(itemView.context)
                 )
-                textviewBirthtime.text = fileResponse.stats?.birthtime
+                textviewModificationTime.text = fileResponse.stats.mtime
 
             }
         }
