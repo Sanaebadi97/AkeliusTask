@@ -1,4 +1,4 @@
-package info.sanaebadi.akeliustask.db.entity
+package info.sanaebadi.akeliustask.model
 
 
 import com.squareup.moshi.Json
@@ -9,5 +9,5 @@ data class FileResponse(
     @Json(name = "path")
     val path: String,
     @Json(name = "stats")
-    val statsResponse: StatsResponse
+    val stats: Stats
 )
