@@ -93,4 +93,8 @@ class AssetRepository @Inject constructor(
 
         }
     }
+
+    companion object{
+        private const val TAG = "AssetRepository"
+    }
 }
