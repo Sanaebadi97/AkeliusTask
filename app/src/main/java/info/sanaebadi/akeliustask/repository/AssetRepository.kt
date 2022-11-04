@@ -1,6 +1,5 @@
 package info.sanaebadi.akeliustask.repository
 
-import android.util.Log
 import androidx.room.withTransaction
 import info.sanaebadi.akeliustask.db.base.AppDatabase
 import info.sanaebadi.akeliustask.db.dao.AssetsDao
@@ -92,9 +91,5 @@ class AssetRepository @Inject constructor(
             }
 
         }
-    }
-
-    companion object{
-        private const val TAG = "AssetRepository"
     }
 }

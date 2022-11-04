@@ -20,7 +20,6 @@ import kotlinx.coroutines.async
 class AssetFragment : BaseFragment<FragmentAssetBinding>(FragmentAssetBinding::inflate) {
     private val viewModel: AssetViewModel by viewModels()
     private val assetAdapter = AssetAdapter()
-    var listofVechileName:List<FileEntity>?=null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,7 +30,6 @@ class AssetFragment : BaseFragment<FragmentAssetBinding>(FragmentAssetBinding::i
             }
 
             viewModel.asset.observe(viewLifecycleOwner) { result ->
-                listofVechileName=result.data
                 assetAdapter.submitList(result.data)
                 progressBar.isVisible =
                     result is Resource.Loading<*> && result.data.isNullOrEmpty()
@@ -45,14 +43,9 @@ class AssetFragment : BaseFragment<FragmentAssetBinding>(FragmentAssetBinding::i
                 swipeToRefresh.isRefreshing=false
                 GlobalScope.async {
                     viewModel.sync()
-                    Log.i(TAG, "onViewCreatedPull: " + listofVechileName )
                 }
             }
         }
-    }
-
-    companion object {
-        private const val TAG = "AssetFragment"
     }
 
 }
