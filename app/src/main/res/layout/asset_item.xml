@@ -37,6 +37,16 @@
             app:layout_constraintTop_toBottomOf="@id/image_asset"
             tools:text="BIRT DAY TIME" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_3x"
+            android:textSize="@dimen/text_4x"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/textview_modification_time"
+            tools:text="BIRT DAY TIME" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
