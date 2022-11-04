@@ -6,11 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import info.sanaebadi.akeliustask.databinding.AssetItemBinding
-import info.sanaebadi.akeliustask.db.entity.AssetsResponse
-import info.sanaebadi.akeliustask.db.entity.FileResponse
+import info.sanaebadi.akeliustask.db.entity.FileEntity
 import info.sanaebadi.akeliustask.util.LoadImage
 
-class AssetAdapter : ListAdapter<FileResponse, AssetAdapter.AssetViewHolder>(AssetComparator()) {
+class AssetAdapter : ListAdapter<FileEntity, AssetAdapter.AssetViewHolder>(AssetComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AssetViewHolder {
         val binding = AssetItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,24 +25,24 @@ class AssetAdapter : ListAdapter<FileResponse, AssetAdapter.AssetViewHolder>(Ass
 
     class AssetViewHolder(private val binding: AssetItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(fileResponse: FileResponse) {
+        fun bind(fileResponse: FileEntity) {
             binding.apply {
                 LoadImage.loadImage(
                     imageAsset,
                     fileResponse.path,
                     LoadImage.getProgressDrawable(itemView.context)
                 )
-                textviewBirthtime.text = fileResponse.statsResponse?.birthtime
+                textviewModificationTime.text = fileResponse.stats.mtime
 
             }
         }
     }
 
-    class AssetComparator : DiffUtil.ItemCallback<FileResponse>() {
-        override fun areItemsTheSame(oldItem: FileResponse, newItem: FileResponse) =
+    class AssetComparator : DiffUtil.ItemCallback<FileEntity>() {
+        override fun areItemsTheSame(oldItem: FileEntity, newItem: FileEntity) =
             oldItem.path == newItem.path
 
-        override fun areContentsTheSame(oldItem: FileResponse, newItem: FileResponse) =
+        override fun areContentsTheSame(oldItem: FileEntity, newItem: FileEntity) =
             oldItem == newItem
     }
 

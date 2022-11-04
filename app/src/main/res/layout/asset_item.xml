@@ -27,7 +27,7 @@
             tools:src="@mipmap/ic_launcher" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textview_birthtime"
+            android:id="@+id/textview_modification_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_3x"
