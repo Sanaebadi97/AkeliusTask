@@ -26,7 +26,8 @@
 # [Apk for install](https://mega.nz/file/8R8HmDzK#7-OV8AfB1PI-DO67WD7hHNNGXNLAMUEixOcsezQ-iWM)
 
 
-<img width="1440" alt="Screenshot 2022-11-04 at 13 43 33" src="https://user-images.githubusercontent.com/26750131/199964918-f650737f-11cb-4d87-90ef-d1d98ef3649f.png">
+<img width="1254" alt="Screenshot 2022-11-04 at 13 45 50" src="https://user-images.githubusercontent.com/26750131/199965195-c83a1dcf-672c-4812-8ac4-e1bcf2a7bdfc.png">
+
 
 
 <img width="1346" alt="Screenshot 2022-11-02 at 10 48 40" src="https://user-images.githubusercontent.com/26750131/199450693-a61f41b8-f682-45d9-8a49-749dfcbe8ac7.png">
