@@ -7,8 +7,12 @@ import info.sanaebadi.akeliustask.db.entity.FileEntity
 import info.sanaebadi.akeliustask.model.FileResponse
 import info.sanaebadi.akeliustask.model.Stats
 import info.sanaebadi.akeliustask.network.service.AssetsRetrofitServices
+import info.sanaebadi.akeliustask.util.DateUtil
 import info.sanaebadi.akeliustask.util.networkBoundResource
 import kotlinx.coroutines.delay
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 
@@ -57,9 +61,13 @@ class AssetRepository @Inject constructor(
     })
 
     suspend fun sync() {
+
         val localFiles = assetsDao.getFiles()
-        val test = assetsRetrofitServices.getAssets().fileResponses.toFileEntity()
-        val remoteFiles = test + test.first().copy(stats = test.first().stats.copy(mtime = "2023-01-01"))
+        val remoteFiles = assetsRetrofitServices.getAssets().fileResponses.toFileEntity()
+        // test the 3 condition
+//        val remoteFiles = test.map {
+//            it.copy(stats = it.stats.copy(mtime = "2023-08-23T17:36:00.000Z", size = 456))
+//        }
 
         //1-what is added remotely and missing locally
         if (localFiles.isEmpty()) {
@@ -74,7 +82,14 @@ class AssetRepository @Inject constructor(
             val deletedFiles = mutableListOf<FileEntity>()
             localFiles.forEach { localFile ->
                 val remoteFile = remoteFiles.find { it.path == localFile.path }
-                if (remoteFile != null && (localFile.stats.mtime != remoteFile.stats.mtime || remoteFile.stats.size != localFile.stats.size)) {
+
+                val (remoteDate: Date, localDate: Date) = getFormattedDate(remoteFile, localFile)
+
+                if (remoteFile != null && (DateUtil.isSameDates(
+                        localDate,
+                        remoteDate
+                    ) || remoteFile.stats.size != localFile.stats.size)
+                ) {
                     modifiedFiles.add(remoteFile)
                 }
                 if (remoteFile == null) {
@@ -92,4 +107,17 @@ class AssetRepository @Inject constructor(
 
         }
     }
+
+    private fun getFormattedDate(
+        remoteFile: FileEntity?,
+        localFile: FileEntity
+    ): Pair<Date, Date> {
+        val utcFormat: DateFormat = SimpleDateFormat(DateUtil.PATTERN_UTC_ZONED, Locale.getDefault())
+        utcFormat.timeZone = TimeZone.getTimeZone("UTC")
+        val remoteDate: Date = utcFormat.parse(remoteFile?.stats?.mtime)
+        val localDate: Date = utcFormat.parse(localFile?.stats?.mtime)
+        return Pair(remoteDate, localDate)
+    }
+
+
 }
