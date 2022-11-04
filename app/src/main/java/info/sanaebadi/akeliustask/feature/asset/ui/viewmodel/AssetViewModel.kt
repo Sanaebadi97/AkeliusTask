@@ -7,6 +7,13 @@ import info.sanaebadi.akeliustask.repository.AssetRepository
 import javax.inject.Inject
 
 @HiltViewModel
-class AssetViewModel @Inject constructor(assetRepository: AssetRepository) : ViewModel() {
+class AssetViewModel @Inject constructor(
+    private val assetRepository: AssetRepository
+) : ViewModel() {
+
     val asset = assetRepository.getAsset().asLiveData()
+
+    suspend fun sync() {
+        assetRepository.sync()
+    }
 }
