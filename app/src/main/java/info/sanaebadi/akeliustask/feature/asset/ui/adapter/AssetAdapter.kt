@@ -32,7 +32,8 @@ class AssetAdapter : ListAdapter<FileEntity, AssetAdapter.AssetViewHolder>(Asset
                     fileResponse.path,
                     LoadImage.getProgressDrawable(itemView.context)
                 )
-                textviewModificationTime.text = fileResponse.stats.mtime
+                textviewModificationTime.text = "Modification Time = ${fileResponse.stats.mtime}"
+                textviewSize.text = "Size = ${fileResponse.stats.size}"
 
             }
         }
